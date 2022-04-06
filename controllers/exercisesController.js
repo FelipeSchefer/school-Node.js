@@ -6,6 +6,18 @@ exports.getExercises = (req, res, next) =>{
   activity: 'Complete with the right verb "to be".',
   question: 'you __ my friend.',
   answer: 'are',
+  setAnswer: '',
   result: ''
- })
+ })     
+}
+
+exports.postExercises = (req, res, next) =>{
+    const setAnswer = req.body.setAnswer
+    console.log('answer ' + setAnswer)
+
+    res.render('exercises/exercises',{
+        result: setAnswer
+       })  
+    
+    res.redirect('/exercises')
 }

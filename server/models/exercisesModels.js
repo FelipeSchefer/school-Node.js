@@ -8,7 +8,6 @@ module.exports = class Exercise {
   this.question = question
   this.answer = answer
  }
-
 }
 
 

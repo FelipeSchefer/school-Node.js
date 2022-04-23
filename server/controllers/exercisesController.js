@@ -13,8 +13,16 @@ exports.getExercises = (req, res, next) =>{
 
 exports.postExercises = (req, res, next) =>{
     const setAnswer = req.body.setAnswer
-    console.log('answer ' + setAnswer)
-    
+    const answer = answer 
+
+    console.log('setAnswer ' + setAnswer)
+    console.log('answer ' + answer)
+    if(setAnswer == answer){
+        console.log('You are correct!')
+    }
+    else{
+        console.log('You are wrong!')
+    }
     res.render('exercises/exercises',{
         pageTitle: 'Exercises',
         test: 'this is a test',
